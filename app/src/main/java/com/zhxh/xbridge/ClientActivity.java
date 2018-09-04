@@ -28,7 +28,7 @@ public class ClientActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_client);
 
-        mCallBackTv = (TextView) findViewById(R.id.tv_callback);
+        mCallBackTv = findViewById(R.id.tv_callback);
         mCallBackTv.setText(R.string.remote_service_unattached);
     }
 
