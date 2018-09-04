@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         sample_text.text = stringFromJNI()
 
         sample_binder.setOnClickListener { startActivity(Intent(this@MainActivity, ClientActivity::class.java)) }
+
+        sample_alarm_set.setOnClickListener { startActivity(Intent(this@MainActivity, AlarmSetActivity::class.java)) }
     }
 
     /**
