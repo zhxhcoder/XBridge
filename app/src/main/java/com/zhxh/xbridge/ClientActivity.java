@@ -42,7 +42,7 @@ public class ClientActivity extends AppCompatActivity {
             mRemoteService = IRemoteService.Stub.asInterface(service);
             String pidInfo = null;
             try {
-                MyData myData = mRemoteService.getMyData();
+                ParcelData myData = mRemoteService.getParcelData();
                 pidInfo = "pid="+ mRemoteService.getPid() +
                         ", data1 = "+ myData.getData1() +
                         ", data2="+ myData.getData2();

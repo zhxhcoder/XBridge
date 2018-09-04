@@ -6,27 +6,27 @@ import android.os.Parcelable;
 /**
  * Created by zhxh on 2018/9/4
  */
-public class MyData implements Parcelable {
+public class ParcelData implements Parcelable {
     private int data1;
     private int data2;
 
-    public MyData() {
+    public ParcelData() {
 
     }
 
-    protected MyData(Parcel in) {
+    protected ParcelData(Parcel in) {
         readFromParcel(in);
     }
 
-    public static final Creator<MyData> CREATOR = new Creator<MyData>() {
+    public static final Creator<ParcelData> CREATOR = new Creator<ParcelData>() {
         @Override
-        public MyData createFromParcel(Parcel in) {
-            return new MyData(in);
+        public ParcelData createFromParcel(Parcel in) {
+            return new ParcelData(in);
         }
 
         @Override
-        public MyData[] newArray(int size) {
-            return new MyData[size];
+        public ParcelData[] newArray(int size) {
+            return new ParcelData[size];
         }
     };
 

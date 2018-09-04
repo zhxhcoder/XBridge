@@ -1,10 +1,10 @@
 package com.zhxh.xbridge;
 
-import com.zhxh.xbridge.MyData;
+import com.zhxh.xbridge.ParcelData;
 
 interface IRemoteService {
 
     int getPid();
 
-    MyData getMyData();
+    ParcelData getParcelData();
 }

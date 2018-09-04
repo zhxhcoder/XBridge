@@ -13,18 +13,18 @@ import android.util.Log;
 public class RemoteService extends Service {
     private static final String TAG = "BinderSimple";
 
-    MyData mMyData;
+    ParcelData mParcelData;
 
     @Override
     public void onCreate() {
         super.onCreate();
         Log.i(TAG, "[RemoteService] onCreate");
-        initMyData();
+        initParcelData();
     }
 
     @Override
     public IBinder onBind(Intent intent) {
-        Log.i(TAG,"[RemoteService] onBind");
+        Log.i(TAG, "[RemoteService] onBind");
         return mBinder;
     }
 
@@ -47,14 +47,14 @@ public class RemoteService extends Service {
 
         @Override
         public int getPid() throws RemoteException {
-            Log.i(TAG,"[RemoteService] getPid()="+android.os.Process.myPid());
+            Log.i(TAG, "[RemoteService] getPid()=" + android.os.Process.myPid());
             return android.os.Process.myPid();
         }
 
         @Override
-        public MyData getMyData() throws RemoteException {
-            Log.i(TAG,"[RemoteService] getMyData()  "+ mMyData.toString());
-            return mMyData;
+        public ParcelData getParcelData() throws RemoteException {
+            Log.i(TAG, "[RemoteService] getParcelData()  " + mParcelData.toString());
+            return mParcelData;
         }
 
         /**此处可用于权限拦截**/
@@ -65,11 +65,11 @@ public class RemoteService extends Service {
     };
 
     /**
-     * 初始化MyData数据
+     * 初始化ParcelData数据
      **/
-    private void initMyData() {
-        mMyData = new MyData();
-        mMyData.setData1(10);
-        mMyData.setData2(20);
+    private void initParcelData() {
+        mParcelData = new ParcelData();
+        mParcelData.setData1(10);
+        mParcelData.setData2(20);
     }
 }

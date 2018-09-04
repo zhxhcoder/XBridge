@@ -1,3 +1,3 @@
 package com.zhxh.xbridge;
 
-parcelable MyData;
+parcelable ParcelData;
